@@ -28,6 +28,22 @@ Aplicación de escritorio para Mundo Gaturro desarrollada para ejecutarse de for
 - Si no posees ninguno de los dos, puedes instalarlos desde la terminal con alguno de los siguientes comandos: `sudo apt install gdebi` o `sudo apt install gnome-software`.
 - Una vez instalado el gestor, haz doble clic en el archivo `.deb` y sigue los pasos para la instalación.
 
+### Instalación automática vía `curl`
+
+- Si buscás un solo comando que haga todo lo anterior desde la terminal usando `curl`, podés ejecutar el siguiente comando. Completa el proceso en menos de 2 minutos:
+
+```bash
+curl -sSL https://raw.githubusercontent.com/Desquised/mundogaturro-installers-linux/main/install.sh | bash
+```
+
+- Asegurate de tener `curl` instalado en tu sistema. En distribuciones basadas en Debian/Ubuntu podés instalarlo con:
+
+```bash
+sudo apt install curl
+```
+
+>  Nota: En la mayoría de las distribuciones Linux modernas, `curl` ya viene preinstalado.
+
 #### Instrucciones para el archivo .AppImage:
 - Haz clic derecho sobre el archivo descargado y selecciona **Propiedades**.
 - En la pestaña de **Permisos**, marca la opción **"Permitir ejecutar el archivo como un programa"**.
