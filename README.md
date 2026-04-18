@@ -43,7 +43,7 @@ Aplicación de escritorio para Mundo Gaturro desarrollada para ejecutarse de for
 
 ### Contacto:
 - Reportar problemas técnicos: [GitHub Issues](https://github.com/Desquised/mundogaturro-installers-linux/issues)
-- Soporte oficial del juego: [Instagram](https://www.instagram.com/rostovhia)
+- Soporte único del cliente: [Instagram](https://www.instagram.com/rostovhia)
 
 ### Imágenes del cliente:
 <img src="https://github.com/Desquised/mundogaturro-installers-linux/blob/main/.assets/g2a6boq5fbt120w7y3rhx88ux31n3pym.png?raw=true">
