@@ -48,7 +48,7 @@ sudo apt install curl
 - Haz clic derecho sobre el archivo descargado y selecciona **Propiedades**.
 - En la pestaña de **Permisos**, marca la opción **"Permitir ejecutar el archivo como un programa"**.
 - Ejecuta el archivo. Si el sistema lo requiere, utiliza el parámetro `--no-sandbox` desde la terminal.
-- Otra opción mucho más rápida via terminal, es usar este comando estando en el directorio del archivo: `./MundoGaturro-Linux-Distribucion-FINAL.AppImage -no--sandbox`
+- Otra opción mucho más rápida via terminal, es usar este comando estando en el directorio del archivo: `./mundogaturro-portable-linux86.AppImage -no--sandbox`
 
 #### Seguridad y Sandbox:
 - El cliente utiliza el parámetro `--no-sandbox` internamente por motivos de compatibilidad con el cliente y el sistema operativo Linux. Windows no lo utiliza porque es más "flexible" que Linux en este aspecto.
