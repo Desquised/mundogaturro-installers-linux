@@ -18,7 +18,7 @@ Aplicación de escritorio para Mundo Gaturro desarrollada para ejecutarse de for
 ### Descargas
 #### Opciones disponibles:
 - [Descargar Instalador (.deb)](https://github.com/Desquised/mundogaturro-installers-linux/blob/main/mundogaturro-installer-linux86.deb?raw=true) - Recomendado para distribuciones basadas en Debian (Ubuntu, Mint, etc).
-- [Descargar Portable (.AppImage)](https://github.com/Desquised/mundogaturro-installers-linux/blob/assets/bin/mundogaturro-portable-linux86.AppImage?raw=true) - Ejecutable portable para cualquier distribución de Linux de 64 bits.
+- [Descargar Portable (.AppImage)](https://github.com/Desquised/mundogaturro-installers-linux/raw/refs/heads/master/mundogaturro-portable-linux86.AppImage?download=) - Ejecutable portable para cualquier distribución de Linux de 64 bits.
 
 #### Requisitos:
 - Arquitectura: Linux 64 bits (x86_64).
