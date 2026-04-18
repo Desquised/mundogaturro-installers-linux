@@ -5,9 +5,6 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Desquised/mundogaturro-installers-linux/">
-    <img src="https://img.shields.io/github/downloads/Desquised/mundogaturro-installers-linux/total?style=flat-square">
-  </a>
   <img src="https://img.shields.io/badge/platform-Linux-blue?style=flat-square">
   <img src="https://img.shields.io/badge/build-native-brightgreen?style=flat-square">
 </p>
