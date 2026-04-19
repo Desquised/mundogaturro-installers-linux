@@ -51,7 +51,7 @@ sudo apt install curl
 - Otra opción mucho más rápida via terminal, es usar este comando estando en el directorio del archivo: `./mundogaturro-portable-linux86.AppImage -no--sandbox`
 
 #### Seguridad y Sandbox:
-- El cliente utiliza el parámetro `--no-sandbox` internamente por motivos de compatibilidad con el cliente y el sistema operativo Linux. Windows no lo utiliza porque es más "flexible" que Linux en este aspecto.
+- El cliente utiliza el parámetro `--no-sandbox` internamente por motivos de compatibilidad con el cliente y el sistema operativo Linux. A diferencia de Windows, el sistema de aislamiento en Linux es tan estricto y fragmentado que bloquea la ejecución de aplicaciones basadas en Chromium, obligándonos a desactivarlo para que el instalador funcione.
 - Esto reduce el nivel de aislamiento de la aplicación respecto al sistema, por lo que se recomienda utilizarlo únicamente si confías en el servicio web oficial y el origen de este instalador.
 
 ### Contacto:
