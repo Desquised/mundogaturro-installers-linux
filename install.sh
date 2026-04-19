@@ -47,16 +47,48 @@ fi
 
 # 6. Crear acceso directo en el escritorio
 echo -e "${GREEN}  Creando acceso directo en el escritorio...${NC}"
-DESKTOP_DIR=$(xdg-user-dir DESKTOP 2>/dev/null || echo "$HOME/Desktop")
+
+# Obtener el directorio del escritorio de forma segura
+if [ -n "$SUDO_USER" ]; then
+    USER_HOME=$(getent passwd "$SUDO_USER" | cut -d: -f6)
+    DESKTOP_DIR=$(sudo -u "$SUDO_USER" xdg-user-dir DESKTOP 2>/dev/null || echo "$USER_HOME/Escritorio")
+    if [ ! -d "$DESKTOP_DIR" ]; then
+        DESKTOP_DIR="$USER_HOME/Desktop"
+    fi
+    CURRENT_USER="$SUDO_USER"
+else
+    DESKTOP_DIR=$(xdg-user-dir DESKTOP 2>/dev/null || echo "$HOME/Escritorio")
+    if [ ! -d "$DESKTOP_DIR" ]; then
+        DESKTOP_DIR="$HOME/Desktop"
+    fi
+    CURRENT_USER=$(whoami)
+fi
+
 SHORTCUT_PATH="$DESKTOP_DIR/gaturro-desktop.desktop"
 
 if [ -d "$DESKTOP_DIR" ]; then
-    cp /usr/share/applications/gaturro-desktop.desktop "$SHORTCUT_PATH"
-    chmod +x "$SHORTCUT_PATH"
-    gio set "$SHORTCUT_PATH" metadata::trusted true 2>/dev/null || true
-    echo -e "${GREEN} Acceso directo creado en: $SHORTCUT_PATH${NC}"
+    # Copiar el archivo usando sudo por si acaso no tenemos permisos en la ruta de origen
+    sudo cp /usr/share/applications/gaturro-desktop.desktop "$SHORTCUT_PATH"
+    
+    # Asignar los permisos correctos al usuario actual
+    sudo chown "$CURRENT_USER":"$CURRENT_USER" "$SHORTCUT_PATH"
+    
+    # Asegurar que el archivo sea ejecutable (crítico para XFCE, KDE, etc.)
+    sudo chmod 755 "$SHORTCUT_PATH"
+    sudo chmod a+x "$SHORTCUT_PATH"
+    
+    # Intentar marcar como confiable para GNOME/Cinnamon
+    if [ -n "$SUDO_USER" ]; then
+        sudo -u "$SUDO_USER" gio set "$SHORTCUT_PATH" metadata::trusted yes 2>/dev/null || true
+        sudo -u "$SUDO_USER" gio set "$SHORTCUT_PATH" metadata::trusted true 2>/dev/null || true
+    else
+        gio set "$SHORTCUT_PATH" metadata::trusted yes 2>/dev/null || true
+        gio set "$SHORTCUT_PATH" metadata::trusted true 2>/dev/null || true
+    fi
+    
+    echo -e "${GREEN} Acceso directo creado y parcheado en: $SHORTCUT_PATH${NC}"
 else
-    echo -e "${RED} No se pudo encontrar la carpeta del escritorio.${NC}"
+    echo -e "${RED} No se pudo encontrar la carpeta del escritorio para crear el acceso directo.${NC}"
 fi
 
 # 7. Limpieza
