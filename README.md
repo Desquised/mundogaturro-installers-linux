@@ -6,7 +6,6 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/platform-Linux-blue?style=flat-square">
-  <img src="https://img.shields.io/badge/build-native-brightgreen?style=flat-square">
 </p>
 
 ## Mundo Gaturro Desktop (Edición Linux)
