@@ -9,8 +9,8 @@
   <img src="https://img.shields.io/badge/build-native-brightgreen?style=flat-square">
 </p>
 
-## Mundo Gaturro Desktop (Versión Linux)
-Aplicación de escritorio para Mundo Gaturro desarrollada para ejecutarse de forma nativa en sistemas Linux.
+## Mundo Gaturro Desktop (Edición Linux)
+Aplicación de escritorio para Mundo Gaturro desarrollada para ejecutarse de forma rápida y fácil en sistemas Linux.
 
 ### Descargas
 #### Opciones disponibles:
@@ -19,7 +19,7 @@ Aplicación de escritorio para Mundo Gaturro desarrollada para ejecutarse de for
 
 #### Requisitos:
 - Arquitectura: Linux 64 bits (x86_64).
-- Almacenamiento: ~350 MB libres.
+- Almacenamiento: ~500 MB libres.
 - Conexión a Internet activa.
 
 ### Instalación e Indicaciones
